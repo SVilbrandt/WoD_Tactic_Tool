@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>WOD Taktik Tool</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+    <link href="src/style.css" rel="stylesheet"/>
+
+    <script src="fertigkeiten/fertigkeiten_v30.js"></script>
+    <script src="fertigkeiten/fertigkeiten_kuerzel_default.js"></script>
+    <script src="gruppen/gruppe_default.js"></script>
+    <script src="items/items_default.js"></script>
+    <script src="options/options_default.js"></script>
+
+    <script src="src/magic.js"></script>
+</head>
+<body>
+<main>
+    <section>
+        <form id="formUpload" enctype="multipart/form-data">
+            <label for="TacticName">Taktik-Name:</label>
+            <input type="text" id="TacticName" />
+
+            <a id="TacticSave" type="button" href>Taktik lokal speichern</a>
+
+            <label for="TacticGetLocalFile">lokale Taktik laden:</label>
+            <input type="file" id="TacticGetLocalFile" accept="application/json"/>
+        </form>
+
+        <div id="TacticGroupLevelContainer">
+            <label for="TacticGroupLevel">Gruppen-Stufe: </label>
+            <select id="TacticGroupLevel" ></select>
+        </div>
+    </section>
+
+    <section id="TacticMainSection">
+        <label for="TacticGeneralInformation">Allgemeine Informationen</label>
+        <textarea id="TacticGeneralInformation"
+                  data-info-textfield
+                  placeholder="BBCode verwendbar"></textarea>
+
+        <nav id="TacticTabNav" data-tab-nav>
+            <a data-tab="default" href class="active">Standard</a>
+            <span id="TacticTabRoomLabel">Level:</span>
+        </nav>
+
+        <section id="TacticTabSection" data-tab-section>
+            <div data-tab-container="default" class="active">
+                <div class="TacticInfoContainer">
+                    <div class="room-info">
+                        <div class="clear">
+                            <label class="room-areals-label">
+                                <span>Anzahl Bereiche</span>
+                                <select data-room-areals>
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                    <option value="5">5</option>
+                                </select>
+                            </label>
+
+                            <label class="room-copy-label">
+                                <span>Level kopieren von:</span>
+                                <select data-room-copy>
+                                    <option value="-">Level wählen</option>
+                                </select>
+                            </label>
+                        </div>
+                        <label class="room-info-label">
+                            <span>Gegner-Informationen</span>
+                            <textarea class="TacticEnemies"
+                                      data-info-textfield
+                                      data-room-enemies
+                                      placeholder="BBCode verwendbar"></textarea>
+                        </label>
+
+                        <label class="room-info-label">
+                            <span>Zusätzliche Info</span>
+                            <textarea class="TacticGeneral"
+                                      data-info-textfield
+                                      data-room-info
+                                      placeholder="BBCode verwendbar"></textarea>
+                        </label>
+                    </div>
+                </div>
+
+                <div class="TacticTableContainer">
+                    <table class="TacticTable">
+                        <thead>
+                        <tr>
+                            <th>Spieler</th>
+                            <th>Vorrunde</th>
+                            <th>Hauptrunde</th>
+                        </tr>
+                        </thead>
+                        <tbody class="TacticTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </section>
+
+    <p id="TacticUserNotification">&nbsp;</p>
+    <textarea id="BBCode" readonly></textarea>
+
+    <template id="TacticTableRowTemplate">
+        <tr>
+            <td data-hero-field></td>
+            <td data-vorrunde>
+                <div data-vorrunde-box data-skill-box>
+                    <select data-skill-selection
+                            data-hero=""
+                            data-round="preround"
+                            data-index="0">
+                        <option value="-">Fertigkeit auswählen</option>
+                    </select>
+                    <select class="invisible"
+                            data-item-selection
+                            data-hero=""
+                            data-round="preround"
+                            data-index="0">
+                        <option value="-">Item auswählen</option>
+                    </select>
+                    <input type="text"
+                           data-instructions
+                           data-hero=""
+                           data-round="preround"
+                           data-index="0"
+                           placeholder="Zusätzliche Anweisungen"/>
+                </div>
+            </td>
+            <td data-hauptrunde>
+                <div data-hauptrunde-box data-skill-box>
+                    <select data-skill-selection
+                            data-hero=""
+                            data-round="mainround"
+                            data-index="0">
+                        <option value="-">Fertigkeit auswählen</option>
+                    </select>
+                    <select class="invisible"
+                            data-item-selection
+                            data-hero=""
+                            data-round="mainround"
+                            data-index="0">
+                        <option value="-">Item auswählen</option>
+                    </select>
+                    <input type="text"
+                           data-instructions
+                           data-hero=""
+                           data-round="mainround"
+                           data-index="0"
+                           placeholder="Zusätzliche Anweisungen"/>
+                </div>
+            </td>
+        </tr>
+    </template>
+</main>
+</body>
+</html>

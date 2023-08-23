@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    font-family: Arial, Helvetia, sans-serif;
+    font-size: 10pt;
+    background-color: #404040;
+    color: white;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clear:before, .clear:after {
+    content: "";
+    clear: both;
+}
+
+main {
+    width: 1400px;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+textarea, select, input {
+    border: 2px ridge #816E36;
+}
+
+textarea {
+    padding: 4px;
+}
+
+#TacticSave {
+    text-decoration: none;
+    display: inline-block;
+    border: 2px ridge #816E36;
+    padding: 1px 8px;
+    margin: 0 15px;
+}
+
+#TacticGroupLevelContainer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+#TacticTabNav {
+    margin: 15px 0;
+    border-bottom: 1px solid #999;
+}
+
+#TacticTabRoomLabel {
+    display: inline-block;
+}
+
+#TacticTabNav [data-tab] {
+    display: inline-block;
+    padding: 5px 20px;
+    margin: 0 5px -1px;
+    background-color: #333;
+    border: 1px solid #999;
+    text-decoration: none;
+}
+#TacticTabNav [data-tab].active {
+    background-color: #666666;
+}
+
+#TacticTabSection {
+    position: relative;
+}
+
+#TacticTabSection [data-tab-container] {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    height: 1px;
+    overflow: hidden;
+}
+
+#TacticTabSection [data-tab-container].active {
+    position: relative;
+    z-index: 1;
+    height: auto;
+}
+
+.TacticInfoContainer .room-areals-label {
+    display: inline-block;
+}
+
+.TacticInfoContainer .room-info-label {
+    display: block;
+    margin-top: 8px;
+}
+
+.TacticInfoContainer .room-copy-label {
+    float: right;
+}
+
+[data-info-textfield] {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+}
+
+.TacticTableContainer {
+    padding-left: 1px;
+    padding-right: 1px;
+}
+
+.TacticTable {
+    border-collapse: collapse;
+    margin: 25px auto 0;
+    width: 100%;
+}
+
+.TacticTable td {
+    padding: 10px;
+    border: 1px solid #606060;
+    vertical-align: top;
+}
+
+[data-skill-box] + [data-skill-box] {
+    margin-top: 5px;
+}
+
+select[data-skill-selection], [data-instructions] {
+    width: 400px;
+}
+
+[data-instructions] {
+    display: block;
+    margin-top: 5px;
+}
+
+#TacticUserNotification {
+    opacity: 1;
+    transition: opacity 5s ease-in;
+}
+
+.fade-away {
+    opacity: 0;
+}
+
+#BBCode {
+    display: block;
+    width: 100%;
+    border: 2px ridge #816E36;
+    padding: 5px;
+    min-height: 50px;
+}
