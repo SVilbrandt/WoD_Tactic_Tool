@@ -38,17 +38,18 @@
  *
  * "Heldenhafter Held!" = Name, der in der Taktik angezeigt wird. Muss einmalig sein!
  * Held: Name, der zum Verlinken der angezeigten Helden verwendet wird ([hero: Held:Heldenhafter Held!])
- * Klasse/Volk: Klassen- und Volkangabe zur Ermittelung der verfügbaren Fertigkeiten
- * Fertigkeiten.zeigeNur: Zeige nur diese Fertigkeiten in der Auswahlliste an und keine anderen
- * Fertigkeiten.zeigeNicht: Zeige diese Fertigkeiten nicht an
- * zeigeNur überschreibt zeigeNicht
- * Gabenstrang: die gewählte Ausrichtung der Klasse ab Level 20, notwendig für die Anzeige der dazugehörigen Gaben
+ * Klasse/Volk: Klassen- und Volksangabe zur Ermittelung der verfügbaren Fertigkeiten.
+ * Fertigkeiten.zeigeNur: Zeige nur diese Fertigkeiten in der Auswahlliste an und keine anderen.
+ * Fertigkeiten.zeigeNicht: Zeige diese Fertigkeiten nicht an.
+ * zeigeNur überschreibt zeigeNicht.
+ * Gabenstrang: die gewählte Ausrichtung der Klasse ab Level 20, notwendig für die Anzeige der dazugehörigen Gaben.
  *
  * Alle Felder müssen vorhanden sein!
- * Es müssen aber keine Fertigkeiten bei zeigeNur oder zeigeNicht angegeben werden, ein leeres [] reicht aus
+ * Es müssen aber keine Fertigkeiten bei zeigeNur oder zeigeNicht angegeben werden, ein leeres [] reicht aus.
  * Vorrunde und Hauptrunde werden getrennt voneinander behandelt.
  *
  * @type Object
+ * @type {Object} Spieler
  */
 const Spieler = {
     "Ritter (Blocker)": {

@@ -3,6 +3,7 @@
  *
  * Optionen: 1 bis 40
  * @type {number}
+ * @typedef {number} GruppenStufe
  */
 const GruppenStufe = 15;
 
@@ -11,6 +12,7 @@ const GruppenStufe = 15;
  *
  * Optionen: true, false
  * @type {boolean}
+ * @typedef {boolean} ZeigeSelbstSkills
  */
 const ZeigeSelbstSkills = true;
 
@@ -20,6 +22,7 @@ const ZeigeSelbstSkills = true;
  *
  * Optionen: true, false
  * @type {boolean}
+ * @typedef {boolean} ZeigeItemAnstattSkill
  */
 const ZeigeItemAnstattSkill = false;
 
@@ -29,6 +32,7 @@ const ZeigeItemAnstattSkill = false;
  *
  * Optionen: true, false
  * @type {boolean}
+ * @typedef {boolean} ZeigeItemAnstattSkillSpecial
  */
 const ZeigeItemAnstattSkillSpecial = true;
 
@@ -38,6 +42,7 @@ const ZeigeItemAnstattSkillSpecial = true;
  * @example ["Bannfedern", "Proviant"]
  * @see ZeigeItemAnstattSkillSpecial
  * @type Array
+ * @typedef {Array} SpecialItemKlassen
  */
 const SpecialItemKlassen = ["Bannfedern"]
 
@@ -56,6 +61,7 @@ const SpecialItemKlassen = ["Bannfedern"]
  * "hauptrunde" = Spalte "Hauptrunde"
  *
  * @type Object
+ * @typedef {Object} TabellenOptionen
  */
 const TabellenOptionen = {
     "table": {

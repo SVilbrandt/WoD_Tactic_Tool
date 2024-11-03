@@ -5,6 +5,7 @@
  *
  * @since 08.08.2023
  * @type Object
+ * @typedef {Object} Fertigkeiten
  */
 const Fertigkeiten = {
     "Abbild auflösen": {

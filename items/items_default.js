@@ -11,6 +11,7 @@
  *   },
  * },
  * @type Object
+ * @typedef {Object} Items
  */
 const Items = {
     "Bannfedern": [

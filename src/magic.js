@@ -61,7 +61,7 @@ const wodTacticTool = {
             });
         });
         
-        self.oGroupLevelSelect.addEventListener("change", (e) => {
+        self.oGroupLevelSelect.addEventListener("change", () => {
             self.updateAllSkillDropdowns();
             self.showBBCode();
         });
@@ -122,8 +122,6 @@ const wodTacticTool = {
                         if (!ZeigeSelbstSkills && oSkill.Ziel === "Selbst") {
                             return;
                         }
-                        
-                        // todo: Initiative? ja, nein?
                         
                         if (oSkill.Verwendbar.match("in Vorrunde")) {
                             oPlayer.Fertigkeiten.skills.vorrunde.push(sSkillName);
@@ -325,7 +323,6 @@ const wodTacticTool = {
      */
     
     /**
-     * todo: optionale gegenstände
      * todo: sonderfälle wie Mittagspause oder Barden-Lieder, wo die Skills Topf/Instrument brauchen, welche wiederum dann die VG benötigen
      * @param oDropdownBox
      */
